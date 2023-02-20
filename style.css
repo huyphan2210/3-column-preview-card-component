@@ -1,4 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display');
 
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(0, 0%, 95%);
+}
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+main {
+    display: flex;
+    width: 80%;
+    max-width: 1024px;
+}
+    .car {
+        width: calc(100% / 3);
+        color: hsl(0, 0%, 95%);
+        background-color: hsl(184, 100%, 22%);
+        padding: 3rem;
+    }
+        .car div{
+            color: hsl(184, 100%, 22%);
+            font-weight: 400;
+            text-align: center;
+            width: 60%;
+            border-width: 0.1rem;
+            border-style: solid;
+            border-color: hsl(0, 0%, 95%);;
+            background-color: hsl(0, 0%, 95%);
+            border-radius: 1rem;
+            padding: 1rem;
+            font-family: 'Lexend Deca', sans-serif;
+        }
+
+            .car div:hover{
+                cursor: pointer;
+                background-color: hsl(184, 100%, 22%);
+                color: hsl(0, 0%, 95%);
+            }
+
+        .car:first-child {
+            background-color: hsl(31, 77%, 52%);
+            border-radius: 1rem 0 0 1rem;
+        }
+            .car:first-child div:hover {
+                background-color: hsl(31, 77%, 52%);
+                color: hsl(0, 0%, 95%);
+            }
+            .car:first-child div{
+                color: hsl(31, 77%, 52%);
+            }
+
+        .car:last-child {
+            background-color: hsl(179, 100%, 13%);
+            border-radius: 0 1rem 1rem 0;
+        }
+            .car:last-child div:hover {
+                background-color: hsl(179, 100%, 13%);
+                color: hsl(0, 0%, 95%);
+            }
+            .car:last-child div{
+                color: hsl(179, 100%, 13%);
+            }
+
+        .car h1 {
+            text-transform: uppercase;
+            font-family: 'Big Shoulders Display', sans-serif;
+        }
+
+        .car p {
+            font-weight: 400;
+            font-family: 'Lexend Deca', sans-serif;
+            margin-block-end: 4rem;
+        }
+
+footer {
+    position: fixed;
+    bottom: 1vh;
+}
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+@media (max-aspect-ratio: 1 / 1) and (max-width: 767px) {
+    body{
+        flex-direction: column;
+    }
+
+    main {
+        flex-direction: column;
+        margin-top: 10vh;
+        margin-bottom: 10vh;
+    }
+
+    .car {
+        width: calc(100% - 6rem);
+    }
+
+        .car:first-child {
+            border-radius: 1rem 1rem 0 0;
+        }
+
+        .car:last-child {
+            border-radius: 0 0 1rem 1rem;
+        }
+
+    footer {
+        position: static;
+    }
+}
